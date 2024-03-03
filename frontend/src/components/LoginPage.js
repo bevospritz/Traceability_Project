@@ -9,7 +9,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       // Invia la richiesta di login al backend
-      const response = await axios.post('/api/utenti/login', { username, password });
+      const response = await axios.post('http://localhost:5000/utenti/login', { username, password });
       // Gestisci la risposta, ad esempio, reindirizza l'utente a una pagina successiva
       console.log('Login avvenuto con successo:', response.data);
     } catch (error) {

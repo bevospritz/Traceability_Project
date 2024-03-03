@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
-
 
 // Creazione app Express
 const app = express();
@@ -16,6 +16,8 @@ mongoose.connect('mongodb://localhost:27017/PippoTom_Traceability_DB', { useNewU
 // Middlewares
 app.use(bodyParser.json());
 
+// Abilita CORS per tutte le origini
+app.use(cors());
 
 // Definizione delle route
 const prodottiRoute = require('./routes/prodotti');
