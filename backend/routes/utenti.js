@@ -1,6 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const Utente = require('../models/utente');
+// const fs = require("fs"); //per leggere il JSON
+
+// // Percorso file json utenti per test
+// const utentiFilePath = "../utenti.json"
+
+// // Leggi gli utenti dal file JSON
+// const leggiUtenti = () => {
+//   try {
+//     const utentiData = fs.readFileSync(utentiFilePath, 'utf8');
+//     return JSON.parse(utentiData);
+//   } catch (error) {
+//     console.error('Errore durante la lettura del file degli utenti:', error);
+//     return [];
+//   }
+// };
 
 // Route per ottenere tutti gli utenti
 router.get('/', async (req, res) => {
